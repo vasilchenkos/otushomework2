@@ -1,5 +1,6 @@
-def test_list_count():
-    mobile_vendors = ['apple', 'xiaomi', 'alcatel', 'samsung', 'xiaomi']
+import pytest
+
+def test_list_count(setup_vendors):
     assert mobile_vendors.count('xiaomi') == 2
 
 def test_list_append():
