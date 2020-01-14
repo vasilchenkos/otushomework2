@@ -8,7 +8,7 @@
 2. Запускаем виртуальное окружение 
 ```source env/bin/activate ```
 3. Обновляем pip
-``` pip pip install -U pip```
+``` pip install -U pip```
 4. Устанавливаем зависимости
 ``` pip install -r requirements.txt ```
 5. Проверяем установку pytest командой
