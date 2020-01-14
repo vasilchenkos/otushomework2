@@ -1,6 +1,11 @@
 import pytest
+import allure
+def test_sun():
+    assert 2+3 == 5
 
-@pytest.fixture()
-def test_list():
-    mobile_vendors = ['apple', 'xiaomi', 'alcatel', 'samsung', 'xiaomi']
-    assert mobile_vendors.reverse() == ['xiaomi', 'samsung', 'alcatel', 'xiaomi', 'apple']
+def test_division():
+    #assert 2/0 == 1
+    with pytest.raises(ZeroDivisionError):
+        print(4/0)
+
+
