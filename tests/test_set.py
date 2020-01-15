@@ -1,9 +1,8 @@
 '''Тесты для множеств (sets)'''
 
-def test_string_join():
+def test_set_join(setup_set_fruits):
     '''Проверяем строку после присоединения к ней другой'''
-    fruits = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
-    assert ('carrot' in fruits) == 0
+    assert ('carrot' in setup_set_fruits) == 0
 
 
 def test_set_del_element():
@@ -17,10 +16,9 @@ def test_empty_set():
     test_set.clear()
     assert test_set == set()
 
-def test_set_len():
+def test_set_len(setup_set_fruits):
     '''Проверяем, что множество включает элементы, а значит ненулевое'''
-    fruits = {'apple', 'pear', 'orange', 'banana'}
-    assert len(fruits) != 0
+    assert len(setup_set_fruits) != 0
 
 def test_set_append():
     '''Проверяем, что в множествах есть пересекающиеся элементы'''

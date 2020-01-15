@@ -1,8 +1,8 @@
 '''Тест для списков (list)'''
 
-def test_list_count(setup_vendors):
+def test_list_count(setup_vendors_list):
     '''Проверяем в тесте сколько раз был добавлен элемент в списке'''
-    assert setup_vendors.count('xiaomi') == 2
+    assert setup_vendors_list.count('xiaomi') == 2
 
 def test_list_append(setup_example_list):
     '''Добавляем в список элементы и сравниваем добавились элементы в конце списка или нет'''
@@ -11,16 +11,16 @@ def test_list_append(setup_example_list):
     setup_example_list.append(8)
     assert setup_example_list == [1, 2, 3, 4, 5, 6, 7, 8]
 
-def test_list_index(setup_vendors):
+def test_list_index(setup_vendors_list):
     '''Проверяем в тесте индекс элемента'''
-    assert setup_vendors.index('apple') == 0
+    assert setup_vendors_list.index('apple') == 0
 
 def test_list_clear(setup_example_list):
     '''Заполняем список, очищаем список и проверяем, что список пустой'''
     setup_example_list.clear()
     assert setup_example_list == []
 
-def test_list_remove(setup_vendors):
+def test_list_remove(setup_vendors_list):
     '''Удаляем конкретный элемент в списке в списке и проверяем список после удаления элемента'''
-    setup_vendors.remove('xiaomi')
-    assert setup_vendors == ['apple', 'alcatel', 'samsung', 'xiaomi']
+    setup_vendors_list.remove('xiaomi')
+    assert setup_vendors_list == ['apple', 'alcatel', 'samsung', 'xiaomi']
