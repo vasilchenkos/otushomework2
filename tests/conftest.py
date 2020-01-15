@@ -1,7 +1,9 @@
-# import pytest
-#
-# @pytest.fixture(autouse=True)
-# def setup_vendors(scope='session'):
-#     mobile_vendors = ['apple', 'xiaomi', 'alcatel', 'samsung', 'xiaomi']
-#
-#     #print("жопа")
+import pytest
+
+@pytest.fixture(scope='session')
+def setup_vendors():
+    return ['apple', 'xiaomi', 'alcatel', 'samsung', 'xiaomi']
+
+@pytest.fixture(scope='session')
+def setup_example_list():
+    return [1, 2, 3, 4, 5]
