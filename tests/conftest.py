@@ -30,3 +30,9 @@ def setup_language_dict():
 def setup_set_fruits():
     """Соберем список со словарем языков программирования"""
     return {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+
+
+@pytest.fixture(scope='module')
+def setup_string_example():
+    """Соберем список со словарем языков программирования"""
+    return 'abracadabra'

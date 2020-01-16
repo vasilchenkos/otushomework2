@@ -1,9 +1,13 @@
-# '''Тесты для строк (string)'''
-#
-# def test_string_join():
-#     '''Проверяем строку после присоединения к ней другой'''
-#     fruits = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
-#     assert ('carrot' in fruits) == 0
+"""Тесты для строк (string)"""
+import pytest
+
+
+@pytest.mark.string
+def test_string_join(setup_string_example):
+    """Проверяем, что строка была переведена в верхний регистр"""
+    assert setup_string_example.upper() == 'ABRACADABRA'
+
+    # assert str == setup_string_example + example_string
 #
 #
 # def test_string():
