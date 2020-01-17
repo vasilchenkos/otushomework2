@@ -3,31 +3,31 @@ import pytest
 
 
 @pytest.mark.string
-def test_string_join(setup_string_example):
+def test_string_uppercase(setup_string_example):
     """Проверяем, что строка была переведена в верхний регистр"""
     assert setup_string_example.upper() == 'ABRACADABRA'
 
-    # assert str == setup_string_example + example_string
-#
-#
-# def test_string():
-#     '''Проверяем то, что set() удаляет дубликаты элементов множества'''
-#     test_set_unique = set('airbnbairbnbairbnb')
-#     assert test_set_unique == {'b', 'n', 'i', 'a', 'r'}
-#
-# def test_string():
-#     '''Проверяем, что после создания множества и очистки осталось пустое множество'''
-#     test_set = {'foo', 'bar'}
-#     test_set.clear()
-#     assert test_set == set()
-#
-# def test_string():
-#     '''Проверяем, что множество включает элементы, а значит ненулевое'''
-#     fruits = {'apple', 'pear', 'orange', 'banana'}
-#     assert len(fruits) != 0
-#
-# def test_string():
-#     '''Проверяем, что в множествах есть пересекающиеся элементы'''
-#     first_set = set('miscrosoft')
-#     second_set = set('facebook')
-#     assert(first_set & second_set) == {'f', 'o', 'c'}
+
+@pytest.mark.string
+def test_string_replace(setup_string_example):
+    """Проверяем то, что в строке заменяются буквы"""
+    assert setup_string_example.replace("a", "z") == 'zbrzczdzbrz'
+
+
+@pytest.mark.string
+def test_string_len(setup_string_example):
+    """Проверяем, что длину строку"""
+    assert len(setup_string_example) == 11
+
+
+@pytest.mark.string
+def test_string_concatenation(setup_string_example):
+    """Проверяем, что множество включает элементы, а значит ненулевое"""
+    second_string = "blablabla"
+    assert setup_string_example + second_string == "abracadabrablablabla"
+
+
+@pytest.mark.string
+def test_string_count(setup_string_example):
+    """Проверяем, что в множествах есть пересекающиеся элементы"""
+    assert setup_string_example.count("abra") == 2
