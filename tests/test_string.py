@@ -27,7 +27,9 @@ def test_string_concatenation(setup_string_example):
     assert setup_string_example + second_string == "abracadabrablablabla"
 
 
+@pytest.mark.parametrize('setup_string_example', [("bra")])
 @pytest.mark.string
 def test_string_count(setup_string_example):
     """Проверяем, что в множествах есть пересекающиеся элементы"""
-    assert setup_string_example.count("abra") == 2
+    print(setup_string_example)
+    assert setup_string_example.count("abra") == 1
