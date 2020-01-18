@@ -45,6 +45,6 @@ TESTDATA = [
 
 @pytest.mark.parametrize("dict_example, number,  expected", TESTDATA)
 @pytest.mark.dictionary
-def test_dictionary_clear(dict_example, number, expected):
+def test_pop_dictionary(dict_example, number, expected):
     """Проверяем что в словаре удалены все элементы"""
     assert dict_example.pop(number) == expected

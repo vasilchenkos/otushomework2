@@ -46,4 +46,5 @@ TESTDATA = [
 @pytest.mark.sets
 @pytest.mark.parametrize("set_example, expected", TESTDATA)
 def test_count_string(set_example, expected):
+    """Очищаем множество элементов"""
     assert set_example.clear() == expected
