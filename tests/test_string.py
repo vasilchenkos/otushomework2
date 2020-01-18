@@ -30,7 +30,6 @@ def test_string_concatenation(setup_string_example):
 @pytest.mark.string
 def test_string_count(setup_string_example):
     """Проверяем, количество вхождений в получаемой строке"""
-    print(setup_string_example)
     assert setup_string_example.count("abra") == 2
 
 
