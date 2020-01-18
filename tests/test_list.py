@@ -35,3 +35,17 @@ def test_list_remove(setup_vendors_list):
     """Проверяем список после удаления элемента"""
     setup_vendors_list.remove('xiaomi')
     assert setup_vendors_list == ['apple', 'alcatel', 'samsung', 'xiaomi']
+
+
+TESTDATA = [
+    (['apple', 'alcatel', 'samsung', 'xiaomi'], 'xiaomi', 3),
+    (['apple', 'alcatel', 'samsung', 'xiaomi'], 'apple', 0),
+    (['apple', 'alcatel', 'samsung', 'xiaomi'], 'samsung', 2),
+]
+
+
+@pytest.mark.list
+@pytest.mark.parametrize("first_list,second_list,expected", TESTDATA)
+def test_count_with_params(first_list, second_list, expected):
+    """Проверяем индекс элемента в списке"""
+    assert first_list.index(second_list) == expected

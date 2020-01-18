@@ -35,3 +35,15 @@ def test_set_append():
     first_set = set('miscrosoft')
     second_set = set('facebook')
     assert (first_set & second_set) == {'f', 'o', 'c'}
+
+
+TESTDATA = [
+    ({'foo', 'bar'}, None),
+    ({'ololo'}, None),
+]
+
+
+@pytest.mark.sets
+@pytest.mark.parametrize("set_example, expected", TESTDATA)
+def test_count_string(set_example, expected):
+    assert set_example.clear() == expected

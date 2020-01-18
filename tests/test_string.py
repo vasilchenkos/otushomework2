@@ -27,9 +27,23 @@ def test_string_concatenation(setup_string_example):
     assert setup_string_example + second_string == "abracadabrablablabla"
 
 
-#@pytest.mark.parametrize('setup_string_example', [("bra")])
 @pytest.mark.string
 def test_string_count(setup_string_example):
     """Проверяем, количество вхождений в получаемой строке"""
     print(setup_string_example)
     assert setup_string_example.count("abra") == 2
+
+
+TESTDATA = [
+    ('ololo', 'lalala', 11),
+    ('привет', 'Andrei', 12),
+    ('привет', '1111', 10),
+]
+
+
+@pytest.mark.string
+@pytest.mark.parametrize("f_str, sec_str, expected", TESTDATA)
+def test_count_string(f_str, sec_str, expected):
+    """Проверяем длину строки после сложения из двух строк"""
+    addition = len(f_str + sec_str)
+    assert addition == expected
